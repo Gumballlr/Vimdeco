@@ -7,6 +7,22 @@
     width: auto;
 
 }
+.container{
+  margin-top: 7rem;
+   
+}
+.form_image{
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo_image{
+
+  height: 248px;
+  width: 302px;
+ 
+}
 .container {
 
 }

@@ -29,13 +29,17 @@
 
 <body class="background_image">
   <!-- <img class="background_home" src="image/home/home1.png" alt=""> -->
+  
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-9 col-md-6 col-lg-6 mx-auto">
+    <div class="form_image"> 
+        <img class="logo_image" src="image/home/Logo_vimadeco.png" alt="">
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-6 mx-auto">
         <div class="card border-0 shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
-            <h5 class="card-title text-center mb-5 fw-light fs-5">Đăng nhập</h5>
+            <h5 class="card-title text-center mb-5 fw-light fs-7">Đăng nhập</h5>
             <form>
               <div class="form-floating mb-3">
                 <label for="floatingInput">Tên đăng nhập</label>
@@ -45,17 +49,22 @@
               <div class="form-floating mb-3">
                 <label for="floatingPassword">Mật khẩu</label>
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu">
+                <!--  check pass word-->
+                <!-- <div class="invalid-feedback">
+                 Please provide a valid zip.
+                 </div> -->
 
               </div>
 
+             
+              <div class="d-grid">
+                <button class="btn btn-primary btn-lg btn-login fw-bold btn-block" type="submit">Đăng nhập</button>
+              </div>
               <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
                 <label class="form-check-label" for="rememberPasswordCheck">
                   Nhớ mật khẩu
                 </label>
-              </div>
-              <div class="d-grid">
-                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Đăng nhập</button>
               </div>
 
 
