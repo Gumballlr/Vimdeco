@@ -29,8 +29,11 @@
 
 <body class="background_image">
   <!-- <img class="background_home" src="image/home/home1.png" alt=""> -->
-  
-Đăng nhập thành công
+  <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
+  <div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
+  <div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
+  <div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div>
+  Đăng nhập thành công
 
 </body>
 

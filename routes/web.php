@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AdminController;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home/login');
+Route::match(['get', 'post'], '/', 'Auth\AdminController@Login');
+Route::group(['middleware' => 'admin'], function () {
+
+  Route::get('/dashboard', 'Auth\AdminController@dashboard');
+  // Route::get('/logout', 'AmdinController@logout');
 });

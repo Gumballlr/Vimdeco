@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Vimdeco</title>
-
+  <base href="{{asset('')}}" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -29,26 +29,31 @@
 
 <body class="background_image">
   <!-- <img class="background_home" src="image/home/home1.png" alt=""> -->
-  
+
 
   <div class="container">
     <div class="row">
-    <div class="form_image"> 
+      <div class="col-sm-4 col-md-4 col-lg-4 align-self-center">
+        <!-- <div class="form_image"> -->
         <img class="logo_image" src="image/home/Logo_vimadeco.png" alt="">
-    </div>
-    <div class="col-sm-9 col-md-6 col-lg-6 mx-auto">
-        <div class="card border-0 shadow rounded-3 my-5">
-          <div class="card-body p-4 p-sm-5">
-            <h5 class="card-title text-center mb-5 fw-light fs-7">Đăng nhập</h5>
-            <form>
+        <!-- </div> -->
+      </div>
+
+      <div class="col-sm-9 col-md-6 col-lg-6">
+        <div class="card border-0 shadow-lg p-3 rounded-3 my-5">
+          <div class="card-body p-5 p-sm-4">
+            <h5 class="card-title text-center mb-4 fw-light fs-7">Đăng nhập</h5>
+            <form action="{{url('/')}}" method="POST">
+              @csrf
               <div class="form-floating mb-3">
                 <label for="floatingInput">Tên đăng nhập</label>
-                <input type="email" class="form-control" id="floatingInput" placeholder="Nhập tên đăng nhập">
+                <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Nhập tên đăng nhập">
 
               </div>
               <div class="form-floating mb-3">
                 <label for="floatingPassword">Mật khẩu</label>
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập mật khẩu">
+                <input type="password" name="password" class="form-control" id="floatingPassword"
+                  placeholder="Nhập mật khẩu">
                 <!--  check pass word-->
                 <!-- <div class="invalid-feedback">
                  Please provide a valid zip.
@@ -56,16 +61,22 @@
 
               </div>
 
-             
+
               <div class="d-grid">
-                <button class="btn btn-primary btn-lg btn-login fw-bold btn-block" type="submit">Đăng nhập</button>
+                <button class="btn btn-primary active btn-lg btn-login fw-boldl btn-block" type="submit">Đăng
+                  nhập</button>
+                &nbsp;
+                <div class="form-check mb-1">
+                  <center>
+                    <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                    <label class="form-check-label" for="rememberPasswordCheck">
+                      Nhớ mật khẩu
+                    </label>
+                  </center>
+
+                </div>
               </div>
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                <label class="form-check-label" for="rememberPasswordCheck">
-                  Nhớ mật khẩu
-                </label>
-              </div>
+
 
 
             </form>
