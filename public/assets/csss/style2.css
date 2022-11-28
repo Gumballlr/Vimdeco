@@ -1,0 +1,10 @@
+.bg-color {
+    background-color: black;
+    color: white;
+}
+#main-container {
+    display: grid;
+    grid-template-columns: 16% 84%;
+    gap: 0.5rem;
+    height: 100vh;
+}
