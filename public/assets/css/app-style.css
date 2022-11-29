@@ -178,19 +178,19 @@ p {
   outline: 0!important
 }
 a {
-    color: #ffffff;
+    color: #000000;
 }
 a {
   outline: none!important
 }
 
 a:hover{
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
 a.text-muted:focus, a.text-muted:hover {
-  color: #748690;
+  color: #9b0000;
 }
 hr {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -359,6 +359,7 @@ hr {
     flex-direction: column;
     position: relative;
 }
+/* need */
 #sidebar-wrapper .metismenu a {
     position: relative;
     display: flex;
@@ -407,7 +408,7 @@ hr {
 #sidebar-wrapper .metismenu a:focus,
 #sidebar-wrapper .metismenu a:active,
 #sidebar-wrapper .metismenu .mm-active > a {
-    color: #ffffff;
+    color: #004EA2;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.22);
 }
@@ -516,7 +517,7 @@ hr {
     z-index: 999;
 	text-align:center;
 	padding:10px;
-    background: #000000;
+    background: #004EA2;
 	box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 	-webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -529,7 +530,7 @@ hr {
 	width: 40px;
     height: 40px;
 	line-height:40px;
-    background: #000;
+    background: #004EA2;
 	text-align:center;
 	font-size:22px;
 	color:#fff;
@@ -643,7 +644,7 @@ body.bg-theme15 {
     margin-left: 250px;
     font-size: 18px;
     font-weight: 600;
-    color: #6f6b6b;
+    color: #000000;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -661,16 +662,16 @@ body.bg-theme15 {
     padding-right: .7rem !important;
     padding-left: .7rem !important;
     font-size: 22px;
-    color: #ffffff;
+    color: #000000;
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu need*/
 .dropdown-menu {
 	border: 0px solid rgba(255, 255, 255, 0.855);
 	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08)!important;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08)!important;
     font-size:15px;
-	background-color: #000;
+	background-color: #004EA2;
     color: #ffffff;
 }
 

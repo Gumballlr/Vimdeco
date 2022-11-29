@@ -173,7 +173,9 @@
         <div class="toggle-menu">
           <i class="zmdi zmdi-menu"></i>
         </div>
-        <div class="search-bar flex-grow-1">
+
+        <!--- search form -->
+        <!-- <div class="search-bar flex-grow-1">
           <div class="input-group">
             <div class="input-group-prepend search-arrow-back">
               <button class="btn btn-search-back" type="button"><i class="zmdi zmdi-long-arrow-left"></i></button>
@@ -183,7 +185,7 @@
               <button class="btn btn-search" type="button"><i class="zmdi zmdi-search"></i></button>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <ul class="navbar-nav align-items-center right-nav-link ml-auto">
           <li class="nav-item dropdown search-btn-mobile">
