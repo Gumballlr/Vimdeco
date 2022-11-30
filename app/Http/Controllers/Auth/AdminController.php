@@ -26,64 +26,52 @@ class AdminController extends Controller
     }
     return View('home.login');
   }
-  public function account(Request $request)
+  public function dashboard(Request $request)
   {
-    return View('admin.account');
+    return View('dashboard.dashboard');
   }
   public function logout()
   {
     Auth::guard('admin')->logout();
     return redirect('/');
   }
-  public function temp(Request $request)
+ 
+  public function account(Request $request)
   {
-    if ($request->isMethod('post')) {
-      $data = $request->all();
-      $validator = Validator::make($data, [
-        'confirm_password' => 'same:new_password'
-      ]);
-      if ($validator->fails()) {
-        return redirect()->back();
-      } else {
-        if (!isset($data['new_password']) && !isset($data['confirm_password'])) {
-          $data['password'] = Admin::find(Auth::guard('admin')->user()->id)->password;
-          Admin::find(Auth::guard('admin')->user()->id)->update($data);
-        } else {
-          $data['password'] = Hash::make($data['new_password']);
-          Admin::find(Auth::guard('admin')->user()->id)->update($data);
+    $admin=Admin::find(Auth::guard('admin')->user()->id);
+    if($request->isMethod('post')){
+        $data=$request->all();
+        if($data['new_password']==$data['confirm_password']&&!empty($data['new_password'])){
+            $data['password']=Hash::make($data['new_password']);
+            $admin->update($data);
+            return redirect()->back()->with('success', 'thanh congg');
+        }else if(empty($data['new_password'])&&empty($data['confirm_password'])){
+            $data['password']=$admin['password'];
+            $admin->update($data);
+            return redirect()->back()->with('success', 'thanh cong');
+        }else{
+            return redirect()->back()->with('error', 'sai!');
         }
-        return redirect()->back();
-      }
     }
-    return View('admin.account');
+    return View('admin.account', compact('admin'));
   }
-  public function changePassword(Request $request)
-  {
-    return view('admin.account');
-  }
+  public function changePassword(Request $request){
 
-  public function changePasswordSave(Request $request)
-  {
-
-    $this->validate($request, [
-      'current_password' => 'required|string',
-      'new_password' => 'required|confirmed|min:1|string'
-    ]);
-    $auth = Auth::user();
-
-    // The passwords matches
-    if (!Hash::check($request->get('current_password'), $auth->password)) {
-      return back()->with('error', "Current Password is Invalid");
-    }
-
-    // Current password and new password same
-    if (strcmp($request->get('current_password'), $request->new_password) == 0) {
-      return redirect()->back()->with("error", "New Password cannot be same as your current password.");
-    }
-
-    $user =  Admin::find($auth->id);
-    $user->password =  Hash::make($request->new_password);
+ 
+  if (Hash::check($request->get('password'), $currentPass)) {
+    $user = Admin::find(Auth::id());
+    $user->password = Hash::make($request->get('password'));
     $user->save();
-    return back()->with('success', "Password Changed Successfully");
-  }
+
+    return response()->json([
+        'status' => true,
+        'msg' => 'Your password changed successfully',
+    ]);
+} else {
+    return response()->json([
+        'status' => false,
+        'msg' => 'Old password is wrong',
+    ]);
+}
+}
 }

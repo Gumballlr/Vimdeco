@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::match(['get', 'post'], '/', 'Auth\AdminController@Login');
 Route::group(['middleware' => 'admin'], function () {
 
-  Route::get('/account', 'Auth\AdminController@account');
+  Route::get('/dashboard', 'Auth\AdminController@dashboard');
   Route::get('/logout', 'Auth\AdminController@logout');
-  Route::get('/change-password', [AdminController::class, 'changePassword'])->name('changePassword');
-  Route::post('/change-password', [AdminController::class, 'changePasswordSave'])->name('postChangePassword');
+  Route::match(['get', 'post'], '\account', 'Auth\AdminController@account');
+  Route::post( '\change', 'Auth\AdminController@changePassword');
 });
