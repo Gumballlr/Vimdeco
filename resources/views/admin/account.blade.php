@@ -29,6 +29,8 @@
   <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet" />
+  <!--- bootstrap 4.6 new add --->
+
 
 </head>
 
@@ -62,78 +64,103 @@
                     <div class="page-title">Thông tin tài khoản</div>
 
                   </div>
+
                   <div class="col-sm-3">
                     <div class="btn-group float-sm-right">
-                      <button type="button" class="btn btn-light waves-effect waves-light">
+                      <button type="button" class="btn btn-light waves-effect waves-light" data-toggle="modal"
+                        data-target="#myModal">
                         Đổi mật khẩu</button>
 
+                      <!------   changepassword with Modal ---->
+                      <!-- Modal -->
+                      <div class=" modal fade" id="myModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
 
+                            <!----     Check errors  -->
+                            @if($errors->any())
+                            {!! implode('', $errors->all('<div style="color:red">:message</div>')) !!}
+                            @endif
+                            @if(Session::get('error') && Session::get('error') != null)
+                            <div style="color:red">{{ Session::get('error') }}</div>
+                            @php
+                            Session::put('error', null)
+                            @endphp
+                            @endif
+                            @if(Session::get('success') && Session::get('success') != null)
+                            <div style="color:green">{{ Session::get('success') }}</div>
+                            @php
+                            Session::put('success', null)
+                            @endphp
+                            @endif
+                            <form action="{{route('postChangePassword')}}" method="POST" class="form"
+                              autocomplete="off">
+                              @csrf
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Đổi mật khẩu</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+
+                              <div class="modal-body">
+
+                                <div class="form-group">
+                                  <label for="inputPasswordOld">
+                                    <h6 style="color:black">Mật khẩu hiện tại </h6>
+                                  </label>
+                                  <input type="password" class="form-control" id="inputPasswordOld"
+                                    name="current_password" required="">
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputPasswordNew">
+                                    <h6 style="color:black">Mật khẩu mới </h6>
+                                  </label>
+                                  <input type="password" class="form-control" id="inputPasswordNew" name="new_password"
+                                    required="">
+
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputPasswordNewVerify">
+                                    <h6 style="color:black">Xác nhận mật khẩu mới</h6>
+                                  </label>
+                                  <input type="password" class="form-control" id="inputPasswordNewVerify"
+                                    name="confirm_password" required="">
+
+                                </div>
+
+                                <button type="submit" class="btn btn-primary text-center">Save</button>
+
+                              </div>
+                              <!-- <div class="modal-footer">
+                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Save</button>
+                                <button type="reset" class="btn btn-primary" data-dismiss="modal">Close </button>
+                              </div> -->
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <!----- end modal -->
                     </div>
                   </div>
+
                 </div>
                 <!---      element  --->
 
               </div>
-              <div class="card-body">
+              <div class=" card-body">
                 <div class="table-responsive">
-                  <!-- <table id="default-datatable" class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Tên</th>
-                        <th>Vị trí</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                      </tr>
 
-                      <tr>
-                        <td>Michael Bruce</td>
-                        <td>Javascript Developer</td>
-                        <td>Singapore</td>
-                        <td>29</td>
-                        <td>2011/06/27</td>
-                        <td>$183,000</td>
-                      </tr>
-                      <tr>
-                        <td>Donna Snider</td>
-                        <td>Customer Support</td>
-                        <td>New York</td>
-                        <td>27</td>
-                        <td>2011/01/25</td>
-                        <td>$112,000</td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </tfoot>
-                  </table> -->
                   <h5>Tên tài khoản</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5" class="form-control" type="text"
-                      placeholder="{{Auth::guard('admin')->user()->name}}" readonly>
+                    <input style=" background-color:#F5F5F5; font-size:17px" class="form-control" type="text"
+                      value="{{Auth::guard('admin')->user()->name}}" readonly>
                   </div>
                   <h5>Chức vụ</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5" class="form-control" type="text" placeholder="Developer"
-                      readonly>
+                    <input style=" background-color:#F5F5F5;font-size:17px" class="form-control" type="text"
+                      value="Developer" readonly>
                   </div>
 
 

@@ -367,7 +367,7 @@ hr {
 #sidebar-wrapper .metismenu a:focus,
 #sidebar-wrapper .metismenu a:active,
 #sidebar-wrapper .metismenu .mm-active > a {
-    color: #004EA2;
+    color: #000000;
     text-decoration: none;
     background: rgb(255, 255, 255);
 }
@@ -1061,15 +1061,21 @@ body.bg-theme15 {
 }
 
 /* Modals */
+.modal{
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .modal-header{
+  background-color: #ffffff;
 	border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .modal-footer{
+   background-color: #ffffff;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 .modal-title {
+
     margin-bottom: 0;
     line-height: 1.5;
     font-size: 14px;
@@ -1078,7 +1084,7 @@ body.bg-theme15 {
 .modal-content{
     border-radius: 0.25rem;
 	font-size: 14px;
-	background: #000;
+	background: rgb(255, 255, 255);
 }
 .close{
 	font-size: 1.4rem;
@@ -2552,7 +2558,7 @@ label {
 
 .form-control{
   border: 0px solid #e5eaef;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #F5F5F5;
   color: #004EA2 !important;
 }
 

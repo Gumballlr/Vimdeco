@@ -32,15 +32,14 @@
                   <div class="avatar"><img class="align-self-start mr-3" src="assets/images/avatars/avatar-13.png"
                       alt="user avatar"></div>
                   <div class="media-body">
-                    <h6 class="mt-2 user-title">Nguyễn Đức Minh</h6>
-                    <p class="user-subtitle">dm@gmail.com</p>
+                    <h6 class="mt-2 user-title">{{Auth::guard('admin')->user()->name}}</h6>
+                    <p class="user-subtitle">{{Auth::guard('admin')->user()->email}}</p>
                   </div>
                 </div>
               </a>
             </li>
             <li class="dropdown-divider"></li>
-            <li class="dropdown-item"><i class="zmdi zmdi-comments mr-3"></i>Inbox</li>
-            <li class="dropdown-divider"></li>
+
             <li class="dropdown-item"><i class="zmdi zmdi-balance-wallet mr-3"></i>Account</li>
             <li class="dropdown-divider"></li>
             <li class="dropdown-item"><i class="zmdi zmdi-settings mr-3"></i>Setting</li>
@@ -49,18 +48,13 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a style="color:black;font-size:18px">Nguyễn Đức Minh</a>
+          <a style="color:black;font-size:18px">{{Auth::guard('admin')->user()->name}}</a>
         </li>
 
         <li class=" nav-item dropdown language">
-          <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" data-toggle="dropdown"
-            href="javascript:void();"><i class="flag-icon flag-icon-gb align-middle"></i></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <li class="dropdown-item"><i class="flag-icon flag-icon-gb mr-3"></i>English</li>
-            <li class="dropdown-item"><i class="flag-icon flag-icon-fr mr-3"></i>French</li>
-            <li class="dropdown-item"><i class="flag-icon flag-icon-cn mr-3"></i>Chinese</li>
-            <li class="dropdown-item"><i class="flag-icon flag-icon-de mr-3"></i>German</li>
-          </ul>
+          <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="{{url('/logout')}}"><i
+              class="zmdi zmdi-power mr-3"></i></a>
+
         </li>
 
       </ul>
