@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Dashboard</title>
+  <title>Trang chủ</title>
   <!-- loader-->
   <link href="assets/css/pace.min.css" rel="stylesheet" />
   <script src="assets/js/pace.min.js"></script>
@@ -59,7 +59,7 @@
                 <!---      element  --->
                 <div class="row">
                   <div class="col-sm-9">
-                    <div class="page-title">Thông tin tài khoản</div>
+                    <div class="page-title">Trang chủ</div>
 
                   </div>
                   <div class="col-sm-3">
@@ -127,13 +127,11 @@
                   </table> -->
                   <h5>Tên tài khoản</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5" class="form-control" type="text"
-                      placeholder="{{Auth::guard('admin')->user()->name}}" readonly>
+                    <input style=" background-color:#F5F5F5" class="form-control" type="text" placeholder="{{Auth::guard('admin')->user()->name}}" readonly>
                   </div>
                   <h5>Chức vụ</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5" class="form-control" type="text" placeholder="Developer"
-                      readonly>
+                    <input style=" background-color:#F5F5F5" class="form-control" type="text" placeholder="Developer" readonly>
                   </div>
 
 
@@ -227,20 +225,20 @@
   <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
 
   <script>
-  $(document).ready(function() {
-    //Default data table
-    $('#default-datatable').DataTable();
+    $(document).ready(function() {
+      //Default data table
+      $('#default-datatable').DataTable();
 
 
-    var table = $('#example').DataTable({
-      lengthChange: false,
-      buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+      var table = $('#example').DataTable({
+        lengthChange: false,
+        buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+      });
+
+      table.buttons().container()
+        .appendTo('#example_wrapper .col-md-6:eq(0)');
+
     });
-
-    table.buttons().container()
-      .appendTo('#example_wrapper .col-md-6:eq(0)');
-
-  });
   </script>
 
 </body>

@@ -8,7 +8,7 @@
 
     <ul class="metismenu" id="menu">
       <li>
-        <a href="javascript:void();">
+        <a href="{{url('/dashboard')}}">
           <div class="parent-icon">
             <i class="zmdi zmdi-view-dashboard"></i>
           </div>
@@ -25,9 +25,9 @@
           <div class="menu-title">QUẢN LÝ TÀI KHOẢN</div>
         </a>
         <ul>
-          <li><a href="components-range-slider.html"><i class="zmdi zmdi-dot-circle-alt"></i> THÔNG TIN TÀI KHOẢN</a>
+          <li><a href="{{url('/account')}}"><i class="zmdi zmdi-dot-circle-alt"></i> THÔNG TIN TÀI KHOẢN</a>
           </li>
-          <li><a href="components-image-carousel.html"><i class="zmdi zmdi-dot-circle-alt"></i> PHẦN QUYỀN HỆ
+          <li><a href="{{url('/permission')}}"><i class="zmdi zmdi-dot-circle-alt"></i> PHẦN QUYỀN HỆ
               THỐNG</a>
           </li>
 

@@ -20,6 +20,7 @@ Route::group(['middleware' => 'admin'], function () {
 
   Route::get('/dashboard', 'Auth\AdminController@dashboard');
   Route::get('/logout', 'Auth\AdminController@logout');
-  Route::match(['get', 'post'], '\account', 'Auth\AdminController@account');
-  Route::post( '\change', 'Auth\AdminController@changePassword');
+  Route::match(['get', 'post'], '/account', 'Auth\AdminController@account');
+  Route::get('/permission', 'Auth\AdminController@permission');
+  Route::get('/user', 'Auth\AdminController@user');
 });

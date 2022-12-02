@@ -48,7 +48,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a style="color:black;font-size:18px">{{Auth::guard('admin')->user()->name}}</a>
+          <a style="color:black;font-size:18px">{{Auth::guard('admin')->user()->name_user}}</a>
         </li>
 
         <li class=" nav-item dropdown language">

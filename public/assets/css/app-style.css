@@ -253,7 +253,7 @@ hr {
 	width:100%;
 	position: relative;
 }
-
+/* need */
 #sidebar-wrapper {
   background-color: #004EA2;
   position: fixed;
@@ -261,7 +261,7 @@ hr {
   left: 0px;
   z-index: 1000;
   overflow: hidden;
-  width: 250px;
+  width: 275px;
   height: calc(100% - 60px);
  -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -363,11 +363,13 @@ hr {
 #sidebar-wrapper .metismenu ul ul ul a {
     padding: 8px 15px 8px 45px;
 }
+/* need */
 #sidebar-wrapper .metismenu a:hover,
 #sidebar-wrapper .metismenu a:focus,
 #sidebar-wrapper .metismenu a:active,
 #sidebar-wrapper .metismenu .mm-active > a {
-    color: #000000;
+    color: #004EA2;
+    font-weight: 450;
     text-decoration: none;
     background: rgb(255, 255, 255);
 }
@@ -760,7 +762,7 @@ body.bg-theme15 {
 /* Logo */
 
 .brand-logo{
-    width: 250px;
+    width: 275px;
 	height: 60px;
 	padding: 10px 15px;
 	display: flex;
@@ -780,9 +782,9 @@ body.bg-theme15 {
 
 .logo-text{
 	color: #ffffff;
-    font-size: 15px;
+    font-size: 32px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0;
     line-height: 0;
 	margin-left: 10px;
@@ -1161,17 +1163,17 @@ body.bg-theme15 {
 .btn-group-sm>.btn{
    font-size: 10px;
 }
-
+/* need */
 .btn-primary {
 	color: #fff;
-	background-color: #7934f3;
-	border-color: #7934f3
+	background-color: #004EA2;
+	border-color: #ffffff;
 }
 
 .btn-primary:hover {
 	color: #fff;
-	background-color: #6a27e0;
-	border-color: #6a27e0
+	background-color: #4d8bcd;
+	border-color: #ffffff;
 }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -1330,6 +1332,7 @@ body.bg-theme15 {
 	box-shadow:none;
 }
 
+/* need */
 .btn-light{
 	color: #ffffff;
 	background-color: #004EA2;
@@ -1344,12 +1347,12 @@ body.bg-theme15 {
 	box-shadow:none;
 }
 .btn-light.disabled, .btn-light:disabled {
-	color: #fff;
+	color: #004EA2;
 	background-color: rgba(255,255,255,.125);
 	border-color: rgba(255,255,255,.125);
 }
 .btn-light:not(:disabled):not(.disabled).active, .btn-light:not(:disabled):not(.disabled):active, .show>.btn-light.dropdown-toggle {
-	color: #fff;
+	color: #004EA2;
 	background-color: rgba(255,255,255,.125);
 	border-color: rgba(255,255,255,.125);
 }
@@ -2504,13 +2507,13 @@ body.bg-theme15 {
 
 
 /* Forms */
-
+/* need */
 label {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: .75rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .60rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 10px;
 }
 
@@ -2526,9 +2529,9 @@ label {
 }
 
 .custom-select{
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.2);
-  border: 0px solid #ced4da;
+  color: #000000;
+  background-color: #ffffff;
+  border: 0.5px solid #ced4da;
 }
 
 .custom-file-label {
@@ -2540,8 +2543,8 @@ label {
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
     line-height: 1.5;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #0072ff;
+    background-color: rgba(255, 255, 255, 0.5);
     border: 0px solid #ced4da;
     border-radius: .25rem;
 }
@@ -2726,7 +2729,7 @@ table.grid td {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3)
 }
 .table-bordered {
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 4px solid rgba(255, 255, 255, 0.15);
 }
 .table-flush td, .table-flush th {
     border-right: 0;
@@ -2747,7 +2750,7 @@ table.grid td {
     font-weight: 600;
 }
 .table-responsive{
-	white-space:nowrap;
+	white-space: unset;
 }
 
 .table .thead-primary th {

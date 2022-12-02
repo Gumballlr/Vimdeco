@@ -30,14 +30,7 @@
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet" />
   <!--- bootstrap 4.6 new add --->
-<style>
-  .error-msg {
-  width: 100%;
-  font-family: 'nobelregular';
-  color: #ff0002;
-  display: none;
-}
-</style>
+
 
 </head>
 
@@ -74,25 +67,23 @@
 
                   <div class="col-sm-3">
                     <div class="btn-group float-sm-right">
-                      <button type="button" class="btn btn-light waves-effect waves-light" data-toggle="modal"
-                        data-target="#myModal">
+                      <button type="button" class="btn btn-light waves-effect waves-light" data-toggle="modal" data-target="#myModal">
                         Đổi mật khẩu</button>
+
 
                       <!------   changepassword with Modal ---->
                       <!-- Modal -->
-                      <div class=" modal fade" id="myModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class=" modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
 
                             <!----     Check errors  -->
-                       
-           
-                            <form action="{{url('/account')}}" method="POST" class="form"
-                              autocomplete="off" id ="changPassForm">
+
+                            <form action="{{url('/account')}}" method="POST" class="form" autocomplete="off">
                               @csrf
                               <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Đổi mật khẩu</h5>
+                                <h5 style="font-size: 18px" class="modal-title" id="exampleModalLongTitle">Đổi mật
+                                  khẩu</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                                 </button>
@@ -100,46 +91,28 @@
 
                               <div class="modal-body">
 
-                              <!---    tesst -->
-                              <div  class="row mr-2 ml-2">
-              <button id="ChangePasswordMsgError" style="display: none" type="button" class="btn btn-lg btn-block btn-outline-danger mb-2"
-                      >Your old password is wrong
-              </button>
-          </div>
-
-          <div  class="row mr-2 ml-2">
-              <button id="ChangePasswordMsgSucc" style="display: none" type="button" class="btn btn-lg btn-block btn-outline-danger mb-2"
-              >Your old password is wrong
-              </button>
-          </div>
-                         
                                 <div class="form-group">
                                   <label for="inputPasswordOld">
                                     <h6 style="color:black">Mật khẩu hiện tại </h6>
-                                    <small id="oldPassword_error" class="form-text text-danger"></small>
                                   </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
+                                  <input type="password" class="form-control" id="inputPasswordOld" name="current_password" required="">
                                 </div>
-                         
                                 <div class="form-group">
                                   <label for="inputPasswordNew">
                                     <h6 style="color:black">Mật khẩu mới </h6>
-                                    <small id="password_error" class="form-text text-danger"></small>
                                   </label>
-                                  <input type="password" class="form-control" id="inputPasswordNew" name="new_password"
-                                    required="">
+                                  <input type="password" class="form-control" id="inputPasswordNew" name="new_password" required="">
 
                                 </div>
-                          
                                 <div class="form-group">
                                   <label for="inputPasswordNewVerify">
                                     <h6 style="color:black">Xác nhận mật khẩu mới</h6>
                                   </label>
-                                  <input type="password" class="form-control" id="inputPasswordNewVerify"
-                                    name="confirm_password" required="">
+                                  <input type="password" class="form-control" id="inputPasswordNewVerify" name="confirm_password" required="">
 
-                                <button id="submitBtn" type="submit" class="btn btn-primary text-center">Save</button>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary text-center">Save</button>
 
                               </div>
                               <!-- <div class="modal-footer">
@@ -161,29 +134,14 @@
               <div class=" card-body">
                 <div class="table-responsive">
 
-<div  class="row mr-2 ml-2">
-              <button id="ChangePasswordMsgError" style="display: none" type="button" class="btn btn-lg btn-block btn-outline-danger mb-2"
-                      >Your old password is wrong
-              </button>
-          </div>
-
-          <div  class="row mr-2 ml-2">
-              <button id="ChangePasswordMsgSucc" style="display: none" type="button" class="btn btn-lg btn-block btn-outline-danger mb-2"
-              >Your old password is wrong
-              </button>
-          </div>
                   <h5>Tên tài khoản</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5; font-size:17px" class="form-control" type="text"
-                      value="{{Auth::guard('admin')->user()->name}}" readonly>
+                    <input style=" background-color:#F5F5F5; font-size:17px" class="form-control" type="text" value="{{Auth::guard('admin')->user()->name}}" readonly>
                   </div>
                   <h5>Chức vụ</h5>
                   <div class="col-md-4 mb-3">
-                    <input style=" background-color:#F5F5F5;font-size:17px" class="form-control" type="text"
-                      value="Developer" readonly>
+                    <input style=" background-color:#F5F5F5;font-size:17px" class="form-control" type="text" value="Developer" readonly>
                   </div>
-                  <div class="error-msg"></div>
-<br><br>
 
 
                 </div>
@@ -276,72 +234,22 @@
   <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
 
   <script>
-  $(document).ready(function() {
-    //Default data table
-    $('#default-datatable').DataTable();
+    $(document).ready(function() {
+      //Default data table
+      $('#default-datatable').DataTable();
 
 
-    var table = $('#example').DataTable({
-      lengthChange: false,
-      buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+      var table = $('#example').DataTable({
+        lengthChange: false,
+        buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+      });
+
+      table.buttons().container()
+        .appendTo('#example_wrapper .col-md-6:eq(0)');
+
     });
-
-    table.buttons().container()
-      .appendTo('#example_wrapper .col-md-6:eq(0)');
-
-  });
   </script>
 
-<script>
-    $(document).on('click', '#submitBtn', function(e){
-        $("#submitBtn").attr("disabled", true);
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-
-        $('#oldPassword_error').text('');
-        $('#password_error').text('');
-
-        var password = $('#inputPasswordNew').val();
-        var oldPassword = $('#inputPasswordOld').val();
-        var passwordConfirmation = $('#inputPasswordNewVerify').val();
-        console.log(oldPassword);
-        console.log(passwordConfirmation);
-
-        $.ajax({
-            type: 'post',
-            url: "{{url('/account')}}",
-            data:{
-              inputPasswordOld:oldPassword,
-                inputPasswordNew:password,
-                inputPasswordNewVerify:passwordConfirmation
-            },
-            cache: false,
-            success: function (response){
-
-                if(response.status===true){
-                    $('#changPassForm')[0].reset();
-                    $('#ChangePasswordMsgSucc').show();
-                    $("#changePassword").attr("disabled", false);
-                }
-                if(response.status===false){
-                    $('#changPassForm')[0].reset();
-                    $('#ChangePasswordMsgError').show();
-                    $("#changePassword").attr("disabled", false);
-                }
-
-            }, error: function (reject){
-                $("#submitBtn").attr("disabled", false);
-                var response = $.parseJSON(reject.responseText);
-                $.each(response.errors, function(key, val){
-                    $("#" + key + "_error").text(val[0]);
-                });
-            }
-        });
-    });
-</script>
 </body>
 
 <!-- Mirrored from codervent.com/dashtremev3/table-data-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jul 2020 09:41:55 GMT -->
