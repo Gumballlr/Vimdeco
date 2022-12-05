@@ -172,7 +172,7 @@ hr {
 
 .row{
 	margin-right: -12.5px;
-    margin-left: -12.5px;
+    margin-left: 0.5px;
 }
 .col,
 .col-1,
@@ -591,6 +591,13 @@ body.bg-theme9 {
 body.bg-theme15 {
   background-image: linear-gradient(45deg, #6a11cb, #2575fc);
 }
+/* Custom-control-table    */
+.custom-control-label{
+  font-size: 16px;
+  display: flex ;
+}
+
+
 
 /* Topbar Header */
 .topbar-nav .navbar{
@@ -604,7 +611,7 @@ body.bg-theme15 {
 
 /* need */
 .toggle-menu {
-    margin-left: 250px;
+    margin-left: 275px;
     font-size: 24px;
     font-weight: 600;
     color: #ffffff;
@@ -5433,6 +5440,7 @@ table.grid td {
 	}
 
   .close-btn{
+
 		display:block;
 	}
 

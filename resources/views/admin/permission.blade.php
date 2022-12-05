@@ -100,10 +100,13 @@
                           <form action="" method="POST" class="form" autocomplete="off">
                             @csrf
                             <div class="modal-header">
+
                               <h5 style="font-size: 18px" class="modal-title" id="exampleModalLongTitle">THÊM QUYỀN SỬ
                                 DỤNG
                               </h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                              <button type="button" class="close" style="color:black" data-dismiss="modal"
+                                aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
@@ -119,63 +122,84 @@
                                     name="current_password" required="">
                                 </div>
                               </div>
-                              <div class="col-md-4 mb-4">
-                                <div class="form-group">
-                                  <div class="container">
-                                    <div class="row">
-                                      <div class="col-12">
-                                        <table class="table table-bordered">
-                                          <thead>
-                                            <tr>
-                                              <th scope="col">Chức năng sử dụng</th>
-                                              <th scope="col">Action</th>
+
+                              <div class="container">
+                                <div class="row align-items-start">
+
+                                  <table style="color:black" class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Chức năng sử dụng</th>
+                                        <th scope="col">Action</th>
 
 
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
 
-                                              <td>Chức năng 1</td>
-                                              <td>
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck1"
-                                                    checked>
-                                                  <label class="custom-control-label" for="customCheck1">1</label>
-                                                </div>
-                                              </td>
+                                        <td>Chức năng người dùng cơ bản: Xem thông tin, Chỉnh sửa bảng CLARANCE,
+                                          ..</td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1"
+                                              checked>
+                                            <label class="custom-control-label" for="customCheck1">1</label>
+                                          </div>
+                                        </td>
 
-                                            </tr>
-                                            <tr>
+                                      </tr>
+                                      <tr>
 
-                                              <td>Chức năng 2</td>
+                                        <td>Chức năng 2</td>
 
-                                              <td>
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                  <label class="custom-control-label" for="customCheck2">2</label>
-                                                </div>
-                                              </td>
-                                            </tr>
-                                            <tr>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">2</label>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
 
-                                              <td>Chức năng 3</td>
-                                              <td>
-                                                <div class="custom-control custom-checkbox">
-                                                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                  <label class="custom-control-label" for="customCheck3">3</label>
-                                                </div>
-                                              </td>
+                                        <td>Chức năng 3</td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">3</label>
+                                          </div>
+                                        </td>
 
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
-                                    </div>
-                                  </div>
+                                      </tr>
+                                      <tr>
+
+                                        <td>Chức năng 4</td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4">4</label>
+                                          </div>
+                                        </td>
+
+                                      </tr>
+                                      <tr>
+
+                                        <td>Chức năng 5</td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                            <label class="custom-control-label" for="customCheck6">3</label>
+                                          </div>
+                                        </td>
+
+                                      </tr>
+                                    </tbody>
+                                  </table>
 
                                 </div>
                               </div>
+
+
 
                               <!---button -->
                               <div class="container">
@@ -185,7 +209,8 @@
                                   </div>
 
                                   <div class="col align-self-end">
-                                    <button type="reset" class="btn btn-danger btn-block text-center">Close</button>
+                                    <button type="button" class="btn btn-danger btn-block text-center"
+                                      data-dismiss="modal" aria-label="Close">Close</button>
                                   </div>
 
 
