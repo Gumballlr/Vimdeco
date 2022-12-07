@@ -46,6 +46,11 @@ class AdminController extends Controller
     $users = User::all();
     return View('admin.user', compact('users'));
   }
+  public function clearance(Request $request)
+  {
+    $users = User::all();
+    return View('container.clearance', compact('users'));
+  }
 
   public function account(Request $request)
   {

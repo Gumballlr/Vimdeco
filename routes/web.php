@@ -22,5 +22,6 @@ Route::group(['middleware' => 'admin'], function () {
   Route::get('/logout', 'Auth\AdminController@logout');
   Route::match(['get', 'post'], '/account', 'Auth\AdminController@account');
   Route::get('/permission', 'Auth\AdminController@permission');
+  Route::get('/clearance', 'Auth\AdminController@clearance');
   Route::get('/user', 'Auth\AdminController@user');
 });
