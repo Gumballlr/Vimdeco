@@ -23,5 +23,6 @@ Route::group(['middleware' => 'admin'], function () {
   Route::match(['get', 'post'], '/account', 'Auth\AdminController@account');
   Route::get('/permission', 'Auth\AdminController@permission');
   Route::get('/clearance', 'Auth\AdminController@clearance');
+  Route::get('/gate', 'Auth\AdminController@gate');
   Route::get('/user', 'Auth\AdminController@user');
 });

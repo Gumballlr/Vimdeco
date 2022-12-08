@@ -43,7 +43,7 @@
         </a>
         <ul>
           <li><a href="{{url('/clearance')}}"><i class="zmdi zmdi-dot-circle-alt"></i> QUẢN LÝ CLEARANCE</a></li>
-          <li><a href="charts-apex.html"><i class="zmdi zmdi-dot-circle-alt"></i>GATE IN/OUT</a></li>
+          <li><a href="{{url('/gate')}}"><i class="zmdi zmdi-dot-circle-alt"></i>GATE IN/OUT</a></li>
           <li><a href="charts-sparkline.html"><i class="zmdi zmdi-dot-circle-alt"></i> QUẢN LÝ DỮ LIỆU</a></li>
 
         </ul>

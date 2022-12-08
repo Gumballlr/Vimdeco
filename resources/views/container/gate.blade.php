@@ -74,10 +74,10 @@
 
                   <div class="col-sm-2">
                     <div class="btn-group float-sm-right">
-                      <button style="background-color: #009D2C; width:180px" type="button"
+                      <button style="background-color: #004EA2; width:120px" type="button"
                         class="btn btn-light waves-effect waves-light" data-toggle="modal"
                         data-target=".bd-example-modal-lg">
-                        ADD clearance
+                       Export
                       </button>
                     </div>
 
@@ -319,10 +319,10 @@
                   </div>
                   <div class="col-sm-2">
                     <div class="btn-group float-sm-right">
-                      <button style="background-color: #009D2C; width:180px" type="button"
+                      <button style="background-color: #009D2C; width:120px" type="button"
                         class="btn btn-light waves-effect waves-light" data-toggle="modal"
                         data-target=".bd-example-modal-lg">
-                        ADD container
+                        ADD 
                       </button>
                     </div>
 
@@ -477,15 +477,14 @@
                       <tr>
                         <th>#</th>
 
-                        <th>Clearance No</th>
-                        <th>Clearance Date</th>
-                        <th>Clearance Type</th>
-                        <th>Clearance ED</th>
-                        <th>Lessee</th>
-                        <th>Lessor</th>
-                        <th>Contract No</th>
-                        <th>Quantity</th>
+                        <th>Container</th>
+                        <th>Gate In</th>
+                        <th>Off Hire</th>
+                        <th>Estimate and Repair</th>
+                        <th>On Hire</th>
+                        <th>Gate Out</th>
                         <th>Action</th>
+                        
 
                       </tr>
                     </thead>
@@ -497,12 +496,12 @@
                         <td>{{$user['name_user']}}</td>
                         <td>{{$user['position']}}</td>
                         <td>{{$user['position']}}</td>
-                        <td>{{++$key}}</td>
-                        <td>{{$user['name']}}</td>
-                        <td>{{$user['name_user']}}</td>
                         <td>{{$user['position']}}</td>
-                        <td> <button><i class="fas fa-edit">	</i></button>
-                        <button><i class= "fas fa-trash-alt"></i></button>	</td>
+                 
+               
+                        <td>{{$user['position']}}</td>
+                        <td> <a href=""><i class= "fas fa-trash-alt"></i></a>
+                     	</td>
 
                       </tr>
                       @endforeach

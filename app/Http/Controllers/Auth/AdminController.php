@@ -51,6 +51,11 @@ class AdminController extends Controller
     $users = User::all();
     return View('container.clearance', compact('users'));
   }
+  public function gate(Request $request)
+  {
+    $users = User::all();
+    return View('container.gate', compact('users'));
+  }
 
   public function account(Request $request)
   {
