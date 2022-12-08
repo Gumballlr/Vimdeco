@@ -28,7 +28,9 @@
   <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-theme bg-theme">
@@ -74,7 +76,7 @@
 
                   <div class="col-sm-2">
                     <div class="btn-group float-sm-right">
-                      <button style="background-color: #009D2C; width:180px" type="button"
+                      <button style="background-color: #009D2C; width:170px" type="button"
                         class="btn btn-light waves-effect waves-light" data-toggle="modal"
                         data-target=".bd-example-modal-lg">
                         ADD clearance
@@ -84,8 +86,9 @@
                     <!---- Modal --->
 
                     <div class=" modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog"
-                      aria-labelledby="myLargeModalLabel" aria-hidden="true" >
-                      <div class="modal-dialog modal-dialog-centered" style="max-width: 1050px!important;" role="document">
+                      aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" style="max-width: 1050px!important;"
+                        role="document">
                         <div class="modal-content">
 
                           <!----     Check errors  -->
@@ -103,90 +106,90 @@
                               </button>
                             </div>
 
-                            <div class="modal-body" >
-                              <!---- row 1 ---> 
-                            <div class="row">
+                            <div class="modal-body">
+                              <!---- row 1 --->
+                              <div class="row">
 
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Clearance No</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Clearance No</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Clearance Date</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Clearance Type</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Clearance Expire Date</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
                                 </div>
                               </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Clearance Date</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Clearance Type</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Clearance Expire Date</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                            </div>
-                            <!---- end row 1-->
+                              <!---- end row 1-->
 
-                            <!---- row 2 ---> 
-                            <div class="row">
+                              <!---- row 2 --->
+                              <div class="row">
 
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Lessee</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Lessee</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Lessor</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Contract No</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3 lg-3">
+                                  <div class="form-group">
+                                    <label for="inputPasswordOld">
+                                      <h6 style="color:black">Quantity</h6>
+                                    </label>
+                                    <input type="password" class="form-control" id="inputPasswordOld"
+                                      name="current_password" required="">
+                                  </div>
                                 </div>
                               </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Lessor</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Contract No</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                              <div class="col-md-3 mb-3 lg-3">
-                                <div class="form-group">
-                                  <label for="inputPasswordOld">
-                                    <h6 style="color:black">Quantity</h6>
-                                  </label>
-                                  <input type="password" class="form-control" id="inputPasswordOld"
-                                    name="current_password" required="">
-                                </div>
-                              </div>
-                              </div>
- <!---- end row 2-->
+                              <!---- end row 2-->
 
                               <div class="container">
                                 <div class="row align-items-start">
@@ -214,28 +217,36 @@
                                         <td>Data</td>
                                         <td>40C </td>
                                         <td>Data</td>
-                                        <td><div class="custom-control custom-checkbox">
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1"
                                               checked>
                                             <label class="custom-control-label" for="customCheck1">1</label>
-                                          </div></td>
-                                        <td><div class="custom-control custom-checkbox">
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1"
                                               checked>
                                             <label class="custom-control-label" for="customCheck1">1</label>
-                                          </div></td>
-                                        <td><div class="custom-control custom-checkbox">
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1"
                                               checked>
                                             <label class="custom-control-label" for="customCheck1">1</label>
-                                          </div></td>
-                                        <td><div class="custom-control custom-checkbox">
+                                          </div>
+                                        </td>
+                                        <td>
+                                          <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1"
                                               checked>
                                             <label class="custom-control-label" for="customCheck1">1</label>
-                                          </div></td>
+                                          </div>
+                                        </td>
                                         <td>Action</td>
-                                       
+
 
                                       </tr>
                                       <tr>
@@ -319,7 +330,7 @@
                   </div>
                   <div class="col-sm-2">
                     <div class="btn-group float-sm-right">
-                      <button style="background-color: #009D2C; width:180px" type="button"
+                      <button style="background-color: #009D2C; width:170px" type="button"
                         class="btn btn-light waves-effect waves-light" data-toggle="modal"
                         data-target=".bd-example-modal-lg">
                         ADD container
@@ -475,7 +486,7 @@
                   <table id="default-datatable" class="table table-striped">
                     <thead>
                       <tr>
-                        <th>#</th>
+
 
                         <th>Clearance No</th>
                         <th>Clearance Date</th>
@@ -497,12 +508,13 @@
                         <td>{{$user['name_user']}}</td>
                         <td>{{$user['position']}}</td>
                         <td>{{$user['position']}}</td>
-                        <td>{{++$key}}</td>
+
                         <td>{{$user['name']}}</td>
-                        <td>{{$user['name_user']}}</td>
-                        <td>{{$user['position']}}</td>
-                        <td> <button><i class="fas fa-edit">	</i></button>
-                        <button><i class= "fas fa-trash-alt"></i></button>	</td>
+                        <td>{{$user['name']}}</td>
+                        <td>{{$user['name']}}</td>
+                        <td> <button><i class="fas fa-edit"> </i></button>
+                          <button><i class="fas fa-trash-alt"></i></button>
+                        </td>
 
                       </tr>
                       @endforeach
